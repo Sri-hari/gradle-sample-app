@@ -16,22 +16,18 @@ repositories {
 
 checkstyle {
 
-  project.ext.checkstyleVersion = '8.43'
-  project.ext.sevntuChecksVersion = '1.39.0'
+    project.ext.checkstyleVersion = '8.8'
 
-  ignoreFailures = true
-  configFile = file("${project.rootDir}/config/checkstyle/checkstyle.xml")
+    configFile = file("${rootDir}/config/checkstyle/checkstyle.xml")
 
-  //sourceSets = [sourceSets.main]
-  //showViolations = true
-  //reportsDir = file("$project.buildDir/checkstyleReports")
-  //configProperties = ['baseDir': "$project.projectDir"]
-
-  //https://discuss.gradle.org/t/some-checkstyle-rules-dont-work-in-gradle/16102/4
-  checkstyleMain {
-    source = sourceSets.main.allSource
-  }
-}
+    checkstyleMain {
+        source = 'src'
+        include '**/*.java'
+        exclude '**/WithViolations.java'
+        }
+    }
+    
+    
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-actuator'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
