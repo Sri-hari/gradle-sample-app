@@ -14,9 +14,8 @@ repositories {
 	mavenCentral()
 }
 
-checkstyle {
-  configFile = file("config/checkstyle/checkstyle.xml")
-}
+ignoreFailures = true
+configFile = file("${project.rootDir}/config/checkstyle/checkstyle.xml")
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-actuator'
