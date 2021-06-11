@@ -16,7 +16,7 @@ repositories {
 
 checkstyle {
   project.ext.checkstyleVersion = '8.20'
-  configFile = file("${rootDir.projectDir}/config/checkstyle/checkstyle.xml")
+  configFile = file("${rootDir}/config/checkstyle/checkstyle.xml")
 }
 
 dependencies {
