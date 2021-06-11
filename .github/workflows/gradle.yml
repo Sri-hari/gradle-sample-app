@@ -38,3 +38,6 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         reporter: 'github-pr-check'
         tool_name: 'testtool'
+    - uses: jwgmeligmeyling/checkstyle-github-action@master
+      with:
+        path: '**/checkstyle-result.xml'
