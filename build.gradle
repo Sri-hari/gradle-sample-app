@@ -1,7 +1,6 @@
 plugins {
 	id 'org.springframework.boot' version '2.1.4.RELEASE'
 	id 'java'
-   	id 'checkstyle'
 }
 
 apply plugin: 'io.spring.dependency-management'
@@ -13,20 +12,6 @@ sourceCompatibility = '1.8'
 repositories {
 	mavenCentral()
 }
-
-checkstyle {
-
-    project.ext.checkstyleVersion = '8.8'
-
-    configFile = file("${rootDir}/config/checkstyle/checkstyle.xml")
-
-    checkstyleMain {
-        source = 'src'
-        include '**/*.java'
-        exclude '**/WithViolations.java'
-        }
-    }
-    
     
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-actuator'
