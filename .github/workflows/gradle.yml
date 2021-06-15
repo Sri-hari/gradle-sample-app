@@ -43,3 +43,4 @@ jobs:
         reporter: 'github-pr-check'
         tool_name: 'testtool'
         filter_mode: 'nofilter'
+        workdir: 'src/**/*.java'
