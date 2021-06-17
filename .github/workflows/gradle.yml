@@ -36,6 +36,3 @@ jobs:
           github_token: ${{ secrets.github_token }}
           reporter: github-pr-review
           level: warning'
-      - uses: jwgmeligmeyling/checkstyle-github-action@master
-        with:
-          path: '**/checkstyle-result.xml'
